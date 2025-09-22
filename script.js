@@ -1,7 +1,15 @@
 var isDate = function (input) {
-	return  !isNAN(Date.parse(input));
+ 
+  if (input instanceof Date && !isNaN(input.getTime())) {
+    return true;
+  }
+  
+  if (typeof input === "string" || typeof input === "number") {
+    return !isNaN(Date.parse(input));
+  }
+  return false;
 };
 
-// Do not change the code below.
+
 const input = prompt("Enter Date.");
 alert(isDate(input));
