@@ -1,5 +1,5 @@
 var isDate = function (input) {
-	return ! isNAN(Date.parse(input));
+	return  !isNAN(Date.parse(input));
 };
 
 // Do not change the code below.
